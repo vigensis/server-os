@@ -1,4 +1,36 @@
-# Quickstart
+# Server OS
+
+Server OS is optimized for balanced server performance on commodity hardware.
+
+It is an opinonated operating system optimized based on Smart OS.
+
+It balances available hardware with demand with powerful hypervisor functionality.
+
+To build Server OS, on an build server:
+
+```bash
+zlogin <build-server-zone>
+
+pkgin -y in git
+
+git clone https://github.com/vigensis/server-os
+
+cd server-os
+
+./configure
+
+gmake world && gmake live
+```
+
+Then see the output of the build:
+
+```bash
+ls output/
+```
+
+Specialty processing is out-sourced to specialty sourcing for optimal scalability.
+
+# Original SmartOS documentation:
 
 ```
 git clone https://github.com/TritonDataCenter/smartos-live.git

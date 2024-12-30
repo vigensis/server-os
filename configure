@@ -201,13 +201,10 @@ function install_pkgin
 {
 	local pkglist
 
-	# removed py39-expat as it is missing in the pakcage repository
-	# replaced py27-sqlite3 with py27-sqlite2 as it is missing in the pakcage repository
-	# to fix build issues
 	pkglist="build-essential flex libxslt openjdk11 nodejs"
-	pkglist="$pkglist p5-XML-Parser gettext python27 python39"
+	pkglist="$pkglist p5-XML-Parser gettext python27 py39-expat python39"
 	pkglist="$pkglist coreutils gsed pkg_alternatives cdrtools"
-	pkglist="$pkglist py27-sqlite2 nasm pigz smartos-build-tools"
+	pkglist="$pkglist py27-sqlite3 nasm pigz smartos-build-tools"
 
 	$conf_priv pkgin -f update || fatal "failed to update pkgsrc repository"
 
